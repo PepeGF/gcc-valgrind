@@ -1,0 +1,14 @@
+version: "1"
+
+services:
+   ubuntu:
+        image: ub
+        container_name: ubuntu
+        build: ./
+        ports:
+            - 3333:3333
+        restart: on-failure
+        volumes:
+            - ./codigos:/debug
+        tty: true
+
